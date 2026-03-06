@@ -27,7 +27,8 @@ The main objectives of this project are:
 
 # 📂 Project Structure
 AI-Document-Summarizer
-│
+
+
 ├── app.py # Streamlit frontend application
 
 ├── utils.py # Backend processing logic
