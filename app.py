@@ -1,9 +1,9 @@
 import streamlit as st
 from utils import extract_text_from_file, generate_summaries
 
-st.set_page_config(page_title="AI Summarizer", page_icon="🧠")
+st.set_page_config(page_title="AI Summarizer")
 
-st.title("🧠 AI Document Summarizer")
+st.title("AI Document Summarizer")
 st.write("Upload a file (.txt, .pdf, .docx) to generate summaries in English and Hindi.")
 
 uploaded_file = st.file_uploader(
