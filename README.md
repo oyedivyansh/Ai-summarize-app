@@ -149,7 +149,7 @@ The application is deployed using **Streamlit Cloud**.
 
 # 🌐 Live Application
 
-Live URL:
+Live URL: https://ai-summarize-app.streamlit.app/
 
 
 
