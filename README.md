@@ -37,8 +37,6 @@ AI-Document-Summarizer
 
 ├── README.md # Project documentation
 
-├── instruction.txt # Provided instructions
-
 ├── Sample_1.pdf # Sample test file
 
 ├── Sample_2.pdf # Sample test file
