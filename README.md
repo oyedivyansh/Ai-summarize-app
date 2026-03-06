@@ -29,12 +29,19 @@ The main objectives of this project are:
 AI-Document-Summarizer
 │
 ├── app.py # Streamlit frontend application
+
 ├── utils.py # Backend processing logic
+
 ├── requirements.txt # Python dependencies
+
 ├── README.md # Project documentation
+
 ├── instruction.txt # Provided instructions
+
 ├── Sample_1.pdf # Sample test file
+
 ├── Sample_2.pdf # Sample test file
+
 └── .gitignore
 
 
