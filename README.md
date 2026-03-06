@@ -7,7 +7,7 @@ The system uses **Cerebras LLM (GPT-OSS-120B)** for fast inference and accurate 
 
 # 🚀 Project Overview
 
-The AI Document Summarizer enables users to upload documents such as **PDF, DOCX, or TXT files** and automatically generate a concise summary limited to **500 words**.
+The AI Document Summarizer enables users to upload documents such as **PDF, DOCX, or TXT files** and automatically generate a concise summary for both english and hindi which is limited to **500 words**.
 
 The application is built with a **simple and user-friendly interface using Streamlit**, allowing users to upload files, generate summaries, and download the results easily.
 
