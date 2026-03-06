@@ -1,0 +1,5 @@
+streamlit
+cerebras-cloud-sdk
+PyPDF2
+python-docx
+python-dotenv

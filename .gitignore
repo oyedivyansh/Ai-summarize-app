@@ -1,0 +1,4 @@
+.env
+sumapp/
+__pycache__/
+*.pyc
