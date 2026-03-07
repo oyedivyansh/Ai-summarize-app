@@ -1,197 +1,188 @@
-#  AI Document Summarizer
+AI Document Summarizer
 
-An AI-powered document summarization application that allows users to upload documents and generate concise summaries in **English and Hindi**.  
-The system uses **Cerebras LLM (GPT-OSS-120B)** for fast inference and accurate summarization.
+Reading long documents can take a lot of time, especially when you only need the main ideas. I built this project to solve that problem.
 
----
+The AI Document Summarizer allows users to upload documents and instantly generate a short summary in English along with a Hindi translation. The goal is to make information easier and faster to understand without reading the entire document.
 
-#  Project Overview
+The system uses Cerebras LLM (GPT-OSS-120B) to analyze the content and generate meaningful summaries while keeping them within a 500-word limit.
 
-The AI Document Summarizer enables users to upload documents such as **PDF, DOCX, or TXT files** and automatically generate a concise summary for both english and hindi which is limited to **500 words**.
+Project Overview
 
-The application is built with a **simple and user-friendly interface using Streamlit**, allowing users to upload files, generate summaries, and download the results easily.
+This application automatically summarizes documents such as PDF, DOCX, and TXT files.
 
----
+Once a file is uploaded, the system extracts the text, sends it to a language model for summarization, and then produces a concise summary in English. The same model is also used to generate a Hindi translation of the summary.
 
-#  Objectives
+The interface is built using Streamlit, which keeps the application simple and easy to use. Users can upload documents, generate summaries, and download the results directly from the browser.
 
-The main objectives of this project are:
+Why I Built This
 
-- Generate **concise summaries limited to 500 words**
-- Support **multiple document formats (PDF, DOCX, TXT)**
-- Provide **English summary and Hindi translation**
-- Offer a **simple and intuitive user interface**
-- Enable **easy deployment and public access**
+While working with reports, research papers, and documentation, I realized that reading everything from start to finish is often unnecessary when you only need the key points.
 
----
+This project was created as a simple tool that can quickly extract the important information from a document and present it in a short, readable format.
 
-#  Project Structure
+Key Features
+
+Generates concise summaries limited to 500 words
+
+Supports multiple document formats (PDF, DOCX, TXT)
+
+Provides summaries in English and Hindi
+
+Simple Streamlit-based user interface
+
+Allows users to download the generated summaries
+
+Can be easily deployed online
+
+Project Structure
 AI-Document-Summarizer
 
-
-├── app.py # Streamlit frontend application
-
-├── utils.py # Backend processing logic
-
-├── requirements.txt # Python dependencies
-
-├── README.md # Project documentation
-
-├── Sample_1.pdf # Sample test file
-
-├── Sample_2.pdf # Sample test file
-
+├── app.py            # Streamlit frontend application
+├── utils.py          # Backend logic for text extraction and summarization
+├── requirements.txt  # Python dependencies
+├── README.md         # Project documentation
+├── Sample_1.pdf      # Sample file for testing
+├── Sample_2.pdf      # Sample file for testing
 └── .gitignore
+Technology Stack
 
+The project uses a small set of tools to keep the system lightweight and easy to maintain.
 
+Technology	Purpose
+Python	Core programming language
+Streamlit	Web interface for the application
+Cerebras Cloud SDK	Access to the GPT-OSS-120B model
+PyPDF2	Extract text from PDF files
+python-docx	Extract text from DOCX files
+python-dotenv	Manage environment variables
+How the Summarization Works
 
+The application uses an abstractive summarization approach powered by a large language model.
 
----
+Instead of simply selecting sentences from the document, the model reads the text, understands its meaning, and generates a new summary that captures the most important ideas.
 
-#  Technology Stack
+Model Used
 
-| Technology | Purpose |
-|--------|--------|
-| Python | Core programming language |
-| Streamlit | Web application interface |
-| Cerebras Cloud SDK | Large Language Model inference |
-| PyPDF2 | PDF text extraction |
-| python-docx | DOCX text extraction |
-| python-dotenv | Environment variable management |
+GPT-OSS-120B (Cerebras)
 
----
+This model is capable of processing large amounts of text and producing summaries that are natural and easy to read.
 
-#  Summarization Approach
+System Workflow
+1. Upload a Document
 
-The system uses an **Abstractive Summarization approach** powered by a **Large Language Model (LLM)**.
+Users can upload a document in one of the following formats:
 
-### Model Used
-**GPT-OSS-120B (Cerebras)**
+PDF
 
-This model generates human-like summaries by understanding the context of the document rather than simply extracting sentences.
+DOCX
 
-### Process
+TXT
 
-1. Extract text from uploaded document
-2. Send text to Cerebras LLM
-3. Generate concise summary (max 500 words)
-4. Translate summary to Hindi
-5. Display results to the user
+2. Text Extraction
 
----
+Once the file is uploaded, the system extracts text using:
 
-# System Workflow
+PyPDF2 for PDF files
 
-### Step 1 — Upload File
-User uploads a supported document:
-- PDF
-- DOCX
-- TXT
+python-docx for DOCX files
 
-### Step 2 — Text Extraction
-The system extracts raw text from the document using:
+Standard Python file reading for TXT files
 
-- **PyPDF2** for PDFs
-- **python-docx** for DOCX
-- Standard Python file reading for TXT
+3. Generate Summary
 
-### Step 3 — Summarization
-Extracted text is sent to the **Cerebras GPT-OSS-120B model** with instructions to generate a summary limited to **500 words**.
+The extracted text is sent to the Cerebras GPT-OSS-120B model, which generates a summary while ensuring that the output stays within 500 words.
 
-### Step 4 — Translation
-The generated English summary is translated into **Hindi** using the same model.
+4. Hindi Translation
 
-### Step 5 — Output Display
-The application displays:
+After the English summary is created, the model generates a Hindi translation so the information can be understood by a wider audience.
 
-- English summary
-- Hindi summary
-- Download options for both summaries
+5. Display Results
 
----
+The application shows:
 
-#  User Interface Features
+English Summary
 
-The application provides an intuitive interface where users can:
+Hindi Summary
 
-- Upload files easily
-- Generate summaries with one click
-- View results instantly
-- Download summaries as text files
+Users can also download the summaries for later use.
 
----
+User Interface
 
-#  Sample Files
+The application is built with Streamlit, which allows the entire tool to run directly in a browser.
 
-The repository contains two sample files for testing:
+The interface is intentionally kept simple so that users can:
+
+Upload a document quickly
+
+Generate summaries with one click
+
+View results immediately
+
+Download summaries if needed
+
+Sample Files
+
+Two sample documents are included in the repository:
+
 Sample_1.pdf
-Sample_2.pdf  
+Sample_2.pdf
 
+These files can be used to test the summarizer and see how it works.
 
-These files can be used to verify the functionality of the summarizer.
+Deployment
 
----
+The application is deployed using Streamlit Cloud, which makes it accessible without installing anything locally.
 
-#  Deployment
+Deployment Steps
 
-The application is deployed using **Streamlit Cloud**.
+Push the project to GitHub
 
-### Deployment Steps
+Connect the repository to Streamlit Cloud
 
-1. Push project to GitHub
-2. Connect repository to Streamlit Cloud
-3. Select `app.py` as the main application file
-4. Add API key to **Streamlit Secrets**
-5. Deploy application
+Select app.py as the main application file
 
----
+Add the Cerebras API key in Streamlit Secrets
 
-#  Live Application
+Deploy the application
 
-Live URL: https://ai-summarize-app.streamlit.app/
+Live Application
 
+You can try the application here:
 
+https://ai-summarize-app.streamlit.app/
 
----
+Limitations
 
-#  Limitations & Assumptions
+Very large documents may be shortened before processing due to model limits.
 
-- The system truncates very large documents to avoid model context limits.
-- Summaries are limited to **500 words** as required.
-- Accuracy depends on the quality of extracted text.
-- Some scanned PDFs without selectable text may not be processed correctly.
+The summary length is restricted to 500 words.
 
----
+The accuracy of results depends on how well text can be extracted from the document.
 
-#  Environment Variables
+Some scanned PDFs without selectable text may not work properly.
 
-The application requires a Cerebras API key.
+Environment Variables
 
-Create a `.env` file:
+To run the project, you need a Cerebras API key.
 
+Create a .env file in the project directory:
 
 CEREBRAS_API_KEY=your_api_key_here
+Running the Project Locally
 
+Install the required dependencies:
 
----
-
-# Running the Project Locally
-
-Install dependencies:
 pip install -r requirements.txt
 
+Run the Streamlit application:
 
-Run the application:
 streamlit run app.py
 
+Then open the browser and go to:
 
-Then open:
 http://localhost:8501
+Author
 
-
----
-
-# Author
 Divyansh Sharma
 
-AI / Machine Learning Enthusiast 
+AI / Machine Learning Enthusiast
