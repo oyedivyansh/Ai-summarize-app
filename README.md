@@ -1,11 +1,11 @@
-# 🧠 AI Document Summarizer
+#  AI Document Summarizer
 
 An AI-powered document summarization application that allows users to upload documents and generate concise summaries in **English and Hindi**.  
 The system uses **Cerebras LLM (GPT-OSS-120B)** for fast inference and accurate summarization.
 
 ---
 
-# 🚀 Project Overview
+#  Project Overview
 
 The AI Document Summarizer enables users to upload documents such as **PDF, DOCX, or TXT files** and automatically generate a concise summary for both english and hindi which is limited to **500 words**.
 
@@ -13,7 +13,7 @@ The application is built with a **simple and user-friendly interface using Strea
 
 ---
 
-# 🎯 Objectives
+#  Objectives
 
 The main objectives of this project are:
 
@@ -25,7 +25,7 @@ The main objectives of this project are:
 
 ---
 
-# 📂 Project Structure
+#  Project Structure
 AI-Document-Summarizer
 
 
@@ -48,7 +48,7 @@ AI-Document-Summarizer
 
 ---
 
-# 🧰 Technology Stack
+#  Technology Stack
 
 | Technology | Purpose |
 |--------|--------|
@@ -61,7 +61,7 @@ AI-Document-Summarizer
 
 ---
 
-# 🧠 Summarization Approach
+#  Summarization Approach
 
 The system uses an **Abstractive Summarization approach** powered by a **Large Language Model (LLM)**.
 
@@ -80,7 +80,7 @@ This model generates human-like summaries by understanding the context of the do
 
 ---
 
-# ⚙️ System Workflow
+# ⚙️System Workflow
 
 ### Step 1 — Upload File
 User uploads a supported document:
@@ -110,7 +110,7 @@ The application displays:
 
 ---
 
-# 🖥️ User Interface Features
+#  User Interface Features
 
 The application provides an intuitive interface where users can:
 
@@ -121,7 +121,7 @@ The application provides an intuitive interface where users can:
 
 ---
 
-# 📄 Sample Files
+#  Sample Files
 
 The repository contains two sample files for testing:
 Sample_1.pdf
@@ -132,7 +132,7 @@ These files can be used to verify the functionality of the summarizer.
 
 ---
 
-# 🚀 Deployment
+#  Deployment
 
 The application is deployed using **Streamlit Cloud**.
 
@@ -146,7 +146,7 @@ The application is deployed using **Streamlit Cloud**.
 
 ---
 
-# 🌐 Live Application
+#  Live Application
 
 Live URL: https://ai-summarize-app.streamlit.app/
 
@@ -154,7 +154,7 @@ Live URL: https://ai-summarize-app.streamlit.app/
 
 ---
 
-# ⚠️ Limitations & Assumptions
+#  Limitations & Assumptions
 
 - The system truncates very large documents to avoid model context limits.
 - Summaries are limited to **500 words** as required.
@@ -163,7 +163,7 @@ Live URL: https://ai-summarize-app.streamlit.app/
 
 ---
 
-# 🔑 Environment Variables
+#  Environment Variables
 
 The application requires a Cerebras API key.
 
@@ -175,7 +175,7 @@ CEREBRAS_API_KEY=your_api_key_here
 
 ---
 
-# ▶️ Running the Project Locally
+# Running the Project Locally
 
 Install dependencies:
 pip install -r requirements.txt
@@ -191,7 +191,7 @@ http://localhost:8501
 
 ---
 
-# 📬 Author
+# 📬Author
 Divyansh Sharma
 
 AI / Machine Learning Enthusiast 
