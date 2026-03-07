@@ -1,4 +1,4 @@
-AI Document Summarizer
+#  AI Document Summarizer
 
 Reading long documents can take a lot of time, especially when you only need the main ideas. I built this project to solve that problem.
 
@@ -6,7 +6,7 @@ The AI Document Summarizer allows users to upload documents and instantly genera
 
 The system uses Cerebras LLM (GPT-OSS-120B) to analyze the content and generate meaningful summaries while keeping them within a 500-word limit.
 
-Project Overview
+#  Project Overview
 
 This application automatically summarizes documents such as PDF, DOCX, and TXT files.
 
@@ -14,7 +14,7 @@ Once a file is uploaded, the system extracts the text, sends it to a language mo
 
 The interface is built using Streamlit, which keeps the application simple and easy to use. Users can upload documents, generate summaries, and download the results directly from the browser.
 
-Why I Built This
+#  Objectives
 
 While working with reports, research papers, and documentation, I realized that reading everything from start to finish is often unnecessary when you only need the key points.
 
@@ -34,7 +34,7 @@ Allows users to download the generated summaries
 
 Can be easily deployed online
 
-Project Structure
+#  Project Structure
 AI-Document-Summarizer
 
 ├── app.py            # Streamlit frontend application
@@ -48,7 +48,7 @@ Technology Stack
 
 The project uses a small set of tools to keep the system lightweight and easy to maintain.
 
-Technology	Purpose
+#  Technology Stack
 Python	Core programming language
 Streamlit	Web interface for the application
 Cerebras Cloud SDK	Access to the GPT-OSS-120B model
@@ -67,7 +67,8 @@ GPT-OSS-120B (Cerebras)
 
 This model is capable of processing large amounts of text and producing summaries that are natural and easy to read.
 
-System Workflow
+
+# System Workflow
 1. Upload a Document
 
 Users can upload a document in one of the following formats:
@@ -133,7 +134,7 @@ Deployment
 
 The application is deployed using Streamlit Cloud, which makes it accessible without installing anything locally.
 
-Deployment Steps
+#  Deployment
 
 Push the project to GitHub
 
@@ -151,7 +152,8 @@ You can try the application here:
 
 https://ai-summarize-app.streamlit.app/
 
-Limitations
+#  Limitations & Assumptions
+
 
 Very large documents may be shortened before processing due to model limits.
 
@@ -161,14 +163,15 @@ The accuracy of results depends on how well text can be extracted from the docum
 
 Some scanned PDFs without selectable text may not work properly.
 
-Environment Variables
+#  Environment Variables
 
 To run the project, you need a Cerebras API key.
 
 Create a .env file in the project directory:
 
 CEREBRAS_API_KEY=your_api_key_here
-Running the Project Locally
+
+# Running the Project Locally
 
 Install the required dependencies:
 
@@ -181,7 +184,9 @@ streamlit run app.py
 Then open the browser and go to:
 
 http://localhost:8501
-Author
+
+
+# Author
 
 Divyansh Sharma
 
