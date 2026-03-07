@@ -80,7 +80,7 @@ This model generates human-like summaries by understanding the context of the do
 
 ---
 
-# ⚙️System Workflow
+# System Workflow
 
 ### Step 1 — Upload File
 User uploads a supported document:
@@ -191,7 +191,7 @@ http://localhost:8501
 
 ---
 
-# 📬Author
+# Author
 Divyansh Sharma
 
 AI / Machine Learning Enthusiast 
